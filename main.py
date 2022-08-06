@@ -11,6 +11,26 @@ def clear():
 
 
 
+def get_banner(my_banner):
+     def wrapper():
+        clear()
+        banner="""
+.__                   __  .__                 __                               
+|  | _____    _______/  |_|  |   ____   _____/  |_  ____   ____   _________  __
+|  | \__  \  /  ___/\   __\  |  /  _ \ / ___\   __\/  _ \_/ ___\ /  ___/\  \/ /
+|  |__/ __ \_\___ \  |  | |  |_(  <_> ) /_/  >  | (  <_> )  \___ \___ \  \   / 
+|____(____  /____  > |__| |____/\____/\___  /|__|  \____/ \___  >____  >  \_/  
+          \/     \/                  /_____/                  \/     \/                              
+"""
+        print(banner)
+        print("")
+        my_banner()
+
+     return wrapper
+
+
+
+@get_banner
 def Check_UserInput():
     WordListUsage=["--help","-help","--h","-h","/help","/h","--usage","-usage","--u","-u","/usage","/u"]
     WordListFile=["--file","-file","/file","--f","-f","/f","--input","-input","/input"]
