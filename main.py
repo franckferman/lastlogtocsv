@@ -95,7 +95,7 @@ def auto():
         print("\033[0;31mExit of the program.\033[00m")
         exit(1)
     else:
-        lastlog_path='/mnt/c/Users/amnesia/Desktop/lastlog'
+        lastlog_path='/var/log/lastlog'
         csv_path='./lastlog.csv'
         print("Selected lastlog file : "+lastlog_path)
         print("Selected csv path : "+csv_path)
