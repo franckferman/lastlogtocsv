@@ -11,17 +11,6 @@ def clear():
 
 
 
-def get_banner(my_banner):
-     def wrapper():
-        clear()
-        print("")
-        my_banner()
-
-     return wrapper
-
-
-
-@get_banner
 def Check_UserInput():
     WordListUsage=["--help","-help","--h","-h","/help","/h","--usage","-usage","--u","-u","/usage","/u"]
     WordListFile=["--file","-file","/file","--f","-f","/f","--input","-input","/input"]
