@@ -191,4 +191,4 @@ def default():
 
 if __name__ == "__main__":
     clear()
-    Check_UserInput()   
+    Check_UserInput()
