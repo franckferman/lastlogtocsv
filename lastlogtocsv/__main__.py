@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import argparse
 import os
 import sys
 from sys import argv
-from traceback import print_exc
-from typing import Any, Dict, List, Optional
+import argparse
 import csv
 import struct
 from functools import partial
@@ -200,7 +198,6 @@ def lastlogtocsv():
 
         print("Selected lastlog file : "+lastlog_path)
         print("Selected csv path : "+csv_path)
-        print("")
 
         with open(lastlog_path, "rb") as lastlog_in:
             if csv_path:
