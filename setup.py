@@ -1,23 +1,21 @@
 from setuptools import setup, find_packages
 
-VERSION = '2.0.2' 
-DESCRIPTION = 'lastlog file to csv'
+VERSION = '2.0.4' 
+DESCRIPTION = 'lastlog to csv.'
 LONG_DESCRIPTION = 'Convert lastlog Linux file to csv.'
 
-# Setting up
 setup(
-       # the name must match the folder name 'lastlogtocsv'
-        name="lastlogtocsv", 
+        name="lastlogtocsv",
         version=VERSION,
+        packages=find_packages(),
         author="Franck FERMAN",
         author_email="<fferman@protonmail.ch>",
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
         
-        keywords=['python', 'lastlog'],
+        keywords=['franckferman', 'lastlog'],
         classifiers= [
-            "Development Status :: 3 - Alpha",
             "Programming Language :: Python :: 3",
         ]
 )
