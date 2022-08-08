@@ -11,11 +11,9 @@ setup(
         author="Franck FERMAN",
         author_email="<fferman@protonmail.ch>",
         description=DESCRIPTION,
-        long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
-        
+        long_description=LONG_DESCRIPTION, 
         keywords=['franckferman', 'lastlog'],
-        classifiers= [
-            "Programming Language :: Python :: 3",
-        ]
+        classifiers=[
+            'Programming Language :: Python :: 3'
+            ]
 )
