@@ -14,6 +14,30 @@ import argparse
 from traceback import print_exc
 from datetime import datetime
 
+#https://de.wikibooks.org/wiki/Benutzer:Schmidt2/Druckversion_Python_unter_Linux#cite_note-10
+
+"""
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import struct
+
+format = "i32s256s"
+userID = 1000
+
+blockgroesse = struct.calcsize(format)
+datei = open("/var/log/lastlog", "r")
+datei.seek(userID * blockgroesse)
+eintrag = datei.read(blockgroesse)
+b = struct.unpack_from(format, eintrag)
+datei.close()
+
+print "Zeitstempel:", b[0]
+print "Terminal:", str(b[1])
+print "Hostname:", str(b[2])
+"""
+
+
 
 class ReadBin(Protocol):
     def read(self, size: int) -> bytes:
