@@ -9,6 +9,9 @@ import csv
 import struct
 from functools import partial
 from typing_extensions import Literal, Protocol
+from typing import Any, Dict, List, Optional
+import argparse
+from traceback import print_exc
 
 
 class ReadBin(Protocol):
