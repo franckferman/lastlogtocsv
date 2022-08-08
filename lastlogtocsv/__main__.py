@@ -12,6 +12,7 @@ from typing_extensions import Literal, Protocol
 from typing import Any, Dict, List, Optional
 import argparse
 from traceback import print_exc
+from datetime import datetime
 
 
 class ReadBin(Protocol):
@@ -40,16 +41,17 @@ def lastlog_to_csv(
 ) -> None:
     format="I32s256s"
     structure=struct.Struct(format)
-    writer=csv.writer(csv_out, lineterminator="\n")
+    writer=csv.writer(csv_out, lineterminator="\n", delimiter=',')
     for block in iter(partial(lastlog_in.read, structure.size), b""):
         if any(block):
             timestamp: int
             line: bytes
             host: bytes
             timestamp, line, host = structure.unpack(block)
-            writer.writerow((timestamp,
-                             line.rstrip(b"\x00").decode("utf8"),
-                             host.rstrip(b"\x00").decode("utf8")))
+            writer.writerow((line.rstrip(b"\x00").decode("utf8"),
+                             host.rstrip(b"\x00").decode("utf8"),
+                             datetime.fromtimestamp(timestamp)))
+
 
 """
 The "lastlog_in" variable is a file object opened in binary mode for reading. 
