@@ -103,7 +103,7 @@ def get_banner(my_banner):
 
      return wrapper
 
-#Python Decorator
+#Python Decorator.
 
 
 
@@ -126,6 +126,8 @@ def Check_UserInput():
     else:
         print("\033[0;31mAn unexpected error was caused.\033[00m")
         exit(1)
+
+#First actions, verification of parameters entered by the user.
 
 
 
