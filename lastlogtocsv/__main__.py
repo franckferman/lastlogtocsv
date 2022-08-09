@@ -13,7 +13,6 @@ from typing import Any, Dict, List, Optional
 import argparse
 from traceback import print_exc
 from datetime import datetime
-import pyutmpx
 
 #https://de.wikibooks.org/wiki/Benutzer:Schmidt2/Druckversion_Python_unter_Linux#cite_note-10
 
@@ -75,6 +74,7 @@ def lastlog_to_csv(
     csv_out: WriteText,
 ) -> None:
     format="I32s256s"
+    #UserID=0
     structure=struct.Struct(format)
     writer=csv.writer(csv_out, lineterminator="\n", delimiter=',')
     writer.writerow(["terminal", "hostname", "datetime"])
