@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '2.0.5' 
+VERSION = '2.0.6' 
 DESCRIPTION = 'lastlog to csv.'
 LONG_DESCRIPTION = 'Convert lastlog Linux file to csv.'
 
