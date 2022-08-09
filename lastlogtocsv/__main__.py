@@ -37,18 +37,6 @@ print "Terminal:", str(b[1])
 print "Hostname:", str(b[2])
 """
 
-"""
-    def lastlog_check(self):
-        #get the dict of username and uid
-        def usermap():
-            return_dict = {}
-            with open("/etc/passwd") as fd:
-                for line in fd:
-                    the_list = line.split(":")
-                    return_dict[the_list[2]] = the_list[0]
-            return return_dict
-"""
-
 class ReadBin(Protocol):
     def read(self, size: int) -> bytes:
         pass
@@ -69,16 +57,38 @@ This code defines a class called WriteText, which represents a text file that ca
 The write() method takes a string as input and returns an integer.
 """
 
+"""
+    def lastlog_check(self):
+        #get the dict of username and uid
+        def usermap():
+            return_dict = {}
+            with open("/etc/passwd") as fd:
+                for line in fd:
+                    the_list = line.split(":")
+                    return_dict[the_list[2]] = the_list[0]
+            return return_dict
+"""
+
 def lastlog_to_csv(
     lastlog_in: ReadBin,
     csv_out: WriteText,
 ) -> None:
     format="I32s256s"
     #UserID=0
+#    with open('/etc/passwd', 'r') as f:
+#        for line in f:
+#            line=line.split(':')
+#            users=line[0]
+#            uid=line[2]
+#            print(uid+" "+users)
     structure=struct.Struct(format)
     writer=csv.writer(csv_out, lineterminator="\n", delimiter=',')
     writer.writerow(["terminal", "hostname", "datetime"])
     for block in iter(partial(lastlog_in.read, structure.size), b""):
+#        for blocks in block:
+#           print("x")
+#           userID+=1
+#           print(userID)
         if any(block):
             timestamp: int
             line: bytes
