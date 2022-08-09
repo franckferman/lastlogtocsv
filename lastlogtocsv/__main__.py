@@ -13,6 +13,7 @@ from typing import Any, Dict, List, Optional
 import argparse
 from traceback import print_exc
 from datetime import datetime
+import pyutmpx
 
 #https://de.wikibooks.org/wiki/Benutzer:Schmidt2/Druckversion_Python_unter_Linux#cite_note-10
 
@@ -37,7 +38,17 @@ print "Terminal:", str(b[1])
 print "Hostname:", str(b[2])
 """
 
-
+"""
+    def lastlog_check(self):
+        #get the dict of username and uid
+        def usermap():
+            return_dict = {}
+            with open("/etc/passwd") as fd:
+                for line in fd:
+                    the_list = line.split(":")
+                    return_dict[the_list[2]] = the_list[0]
+            return return_dict
+"""
 
 class ReadBin(Protocol):
     def read(self, size: int) -> bytes:
@@ -66,6 +77,7 @@ def lastlog_to_csv(
     format="I32s256s"
     structure=struct.Struct(format)
     writer=csv.writer(csv_out, lineterminator="\n", delimiter=',')
+    writer.writerow(["terminal", "hostname", "datetime"])
     for block in iter(partial(lastlog_in.read, structure.size), b""):
         if any(block):
             timestamp: int
@@ -76,6 +88,14 @@ def lastlog_to_csv(
                              host.rstrip(b"\x00").decode("utf8"),
                              datetime.fromtimestamp(timestamp)))
 
+
+
+
+"""
+for block in iter(partial(lastlog_in.read, structure.size), b""):
+Si je print(block), j'ai des tonnes et des tonnes de blocks, le block 0 (premier) correspond à l'utilisateur root (id 0), le user avec le id 1000 le block 1000... 
+La solution serait (potentiellement?) de faire une correspondance entre les users/uids (/etc/passwd) et les blocs...
+"""
 
 """
 The "lastlog_in" variable is a file object opened in binary mode for reading. 
