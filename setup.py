@@ -9,7 +9,7 @@ setup(
         version=VERSION,
         packages=find_packages(),
         install_requires=[
-        'typing_extensions']
+        'typing_extensions'],
         author="Franck FERMAN",
         author_email="<fferman@protonmail.ch>",
         description=DESCRIPTION,
