@@ -24,8 +24,6 @@
     Convert lastlog Linux file to CSV file, with Python 3.
     <br />
     <br />
-    <a href="https://asciinema.org/">View Demo</a>
-    .
     <a href="https://github.com/franckferman/lastlogtocsv/issues">Report Bug</a>
     ·
     <a href="https://github.com/franckferman/lastlogtocsv/issues">Request Feature</a>
@@ -56,8 +54,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![asciicast](https://asciinema.org/)](https://asciinema.org/)
 
 This project was created for a specific need.
 
@@ -173,4 +169,3 @@ Project Link: [https://github.com/franckferman/lastlogtocsv](https://github.com/
 [license-url]: https://github.com/franckferman/lastlogtocsv/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/franckferman
-[product-screenshot]: images/screenshot.png
