@@ -15,7 +15,7 @@
 
 <div align="center">
   <a href="https://github.com/franckferman/lastlogtocsv">
-    <img src="https://raw.githubusercontent.com/franckferman/lastlogtocsv/main/img/logo.png" alt="Logo" width="200" height="200">
+    <img src="https://raw.githubusercontent.com/franckferman/lastlogtocsv/main/img/logo.svg" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">lastlogtocsv</h3>
