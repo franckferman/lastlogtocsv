@@ -7,7 +7,6 @@
 [![Stargazers][stars-shield]](https://github.com/franckferman/lastlogtocsv/stargazers)
 [![Issues][issues-shield]](https://github.com/franckferman/lastlogtocsv/issues)
 [![MIT License][license-shield]](https://github.com/franckferman/lastlogtocsv/blob/main/LICENSE)
-[![PyPI version](https://badge.fury.io/py/lastlogtocsv.svg)](https://badge.fury.io/py/lastlogtocsv)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/franckferman)
 
 </div>
@@ -20,6 +19,7 @@
   </a>
 
 <h3 align="center">lastlogtocsv</h3>
+[![PyPI version](https://badge.fury.io/py/lastlogtocsv.svg)](https://badge.fury.io/py/lastlogtocsv)
 
   <p align="center">
     Convert lastlog Linux file to CSV file, with Python 3.
