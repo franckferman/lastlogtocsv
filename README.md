@@ -23,8 +23,6 @@
   <p align="center">
     Convert lastlog Linux file to CSV file, with Python 3.
     <br />
-    <a href="https://github.com/franckferman/lastlogtocsv/blob/main/README.md"><strong>Explore the full documentation »</strong></a>
-    <br />
     <br />
     <a href="https://asciinema.org/">View Demo</a>
     .
