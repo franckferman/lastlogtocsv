@@ -124,6 +124,11 @@ mkdir ./lastlogtocsv&&curl https://raw.githubusercontent.com/franckferman/lastlo
 Set-Location -Path "C:\";python.exe .\__main__.py
 ```
 
+* On Linux, to run the program, simply go to the program installation path and run the program:
+```sh
+cd ~/;python3 .\__main__.py
+```
+
 * If you have installed the script with pip, simply use the command:
 ```sh
 python3 -m lastlogtocsv
